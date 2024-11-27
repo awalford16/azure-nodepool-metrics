@@ -1,4 +1,4 @@
-module azure-nodepool-checker
+module azure-nodepool-metrics
 
 go 1.23
 
