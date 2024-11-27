@@ -82,7 +82,7 @@ func (client *K8sClient) getConfigMapData() (*AutoScalerStatus, error) {
 	// Retrieve the ConfigMap data
 	configMap, err := client.Client.CoreV1().ConfigMaps(CONFIGMAP_NAMESPACE).Get(context.TODO(), CONFIGMAP_NAME, metav1.GetOptions{})
 	if err != nil {
-		log.Fatalf("Error getting ConfigMap: %v", err)
+		log.Warnf("Error getting ConfigMap: %v", err)
 		return nil, err
 	}
 
